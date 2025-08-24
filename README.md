@@ -24,7 +24,7 @@ Uma API moderna em Node.js para gerenciar cursos, construída com Fastify, TypeS
 
    ```bash
    git clone <url-do-repositório>
-   cd dia2
+   cd Rocket/api
    ```
 
 2. **Instale as dependências**
@@ -90,7 +90,7 @@ Quando o servidor estiver rodando, você pode acessar:
 
 #### Criar Curso
 
-```bash
+```http
 POST /courses
 Content-Type: application/json
 
@@ -102,14 +102,14 @@ Content-Type: application/json
 
 #### Listar Cursos
 
-```bash
+```http
 GET /courses
 ```
 
 #### Buscar Curso por ID
 
-```bash
-GET /courses/{id-do-curso}
+```http
+GET /courses/{id}
 ```
 
 ## 🗄️ Schema do Banco de Dados
@@ -129,7 +129,7 @@ GET /courses/{id-do-curso}
 ## 🏗️ Estrutura do Projeto
 
 ```
-dia2/
+api/
 ├── src/
 │   ├── database/
 │   │   ├── client.ts      # Conexão com o banco de dados
@@ -140,7 +140,7 @@ dia2/
 │       └── get-courses.ts
 ├── drizzle/               # Migrações do banco de dados
 ├── docker-compose.yml     # Configuração do container PostgreSQL
-├── server.ts             # Ponto de entrada principal da aplicação
+├── server.ts              # Ponto de entrada principal da aplicação
 └── package.json
 ```
 
@@ -192,5 +192,5 @@ flowchart TD
     N --> O
     style O fill:#e0ffe0,stroke:#333,stroke-width:2px
 ```
-# api-fastify
+
 # api-fastify
